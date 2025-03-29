@@ -8,7 +8,7 @@ const Hero = () => {
     }} className="py-20 md:py-32 bg-cover bg-center bg-gray-950">
         <div className="container mx-auto px-4 flex flex-col items-center text-center bg-white/60 py-12 rounded-lg backdrop-blur-sm">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
-            <span className="text-salon-gold">Isabella Beauty</span>
+            <span className="text-gray-950">Isabella Beauty</span>
           </h1>
           <p className="text-xl text-gray-700 max-w-2xl mb-10">
             Професионални услуги за лазерна епилация, маникюр и фризьорство в сърцето на София
