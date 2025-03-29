@@ -21,7 +21,7 @@ const Index = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Нашите Услуги</h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Предлагаме висококачествени услуги за вашата красота и комфорт
+                Предлагаме висококачествени услуги за вашата красота и комфорт в Isabella Beauty
               </p>
             </div>
 
@@ -31,18 +31,21 @@ const Index = () => {
                 description="Трайно и безболезнено премахване на нежелано окосмяване с най-модерните технологии."
                 icon={<Calendar size={48} />}
                 link="/services#laser"
+                imageUrl="/laser-removal.jpg"
               />
               <ServiceCard
                 title="Маникюр"
                 description="Професионална грижа за вашите нокти - класически, гел и арт маникюр."
                 icon={<User size={48} />}
                 link="/services#manicure"
+                imageUrl="/manicure.jpg"
               />
               <ServiceCard
                 title="Фризьорски Услуги"
                 description="Подстригване, боядисване, прически и третиране за всеки тип коса."
                 icon={<Scissors size={48} />}
                 link="/services#hair"
+                imageUrl="/hair-styling.jpg"
               />
             </div>
 
@@ -50,6 +53,33 @@ const Index = () => {
               <Button asChild variant="outline" className="border-salon-deep-pink text-salon-deep-pink hover:bg-salon-pink">
                 <Link to="/services">Вижте всички услуги</Link>
               </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Gallery Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Нашите Работи</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Разгледайте нашето портфолио от успешни трансформации
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="overflow-hidden rounded-lg">
+                <img src="/work-1.jpg" alt="Маникюр" className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div className="overflow-hidden rounded-lg">
+                <img src="/work-2.jpg" alt="Прическа" className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div className="overflow-hidden rounded-lg">
+                <img src="/work-3.jpg" alt="Козметична процедура" className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div className="overflow-hidden rounded-lg">
+                <img src="/work-4.jpg" alt="Лазерна епилация" className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500" />
+              </div>
             </div>
           </div>
         </section>

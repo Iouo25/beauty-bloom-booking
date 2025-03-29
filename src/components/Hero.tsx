@@ -6,12 +6,12 @@ import { Button } from '@/components/ui/button';
 const Hero = () => {
   return (
     <div className="relative">
-      <div className="bg-salon-pink py-20 md:py-32">
-        <div className="container mx-auto px-4 flex flex-col items-center text-center">
+      <div className="bg-salon-pink py-20 md:py-32 bg-cover bg-center" style={{ backgroundImage: 'url("/beauty-studio-bg.jpg")' }}>
+        <div className="container mx-auto px-4 flex flex-col items-center text-center bg-white/60 py-12 rounded-lg backdrop-blur-sm">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
-            Открийте <span className="text-salon-deep-pink">истинската</span> красота
+            <span className="text-salon-deep-pink">Isabella Beauty</span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mb-10">
+          <p className="text-xl text-gray-700 max-w-2xl mb-10">
             Професионални услуги за лазерна епилация, маникюр и фризьорство в сърцето на София
           </p>
           <div className="flex flex-col sm:flex-row gap-4">

@@ -9,11 +9,15 @@ interface ServiceCardProps {
   description: string;
   icon: React.ReactNode;
   link: string;
+  imageUrl: string;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, link }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, link, imageUrl }) => {
   return (
     <Card className="service-card bg-white overflow-hidden border border-gray-100 h-full">
+      <div className="h-48 overflow-hidden">
+        <img src={imageUrl} alt={title} className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+      </div>
       <CardContent className="p-6">
         <div className="flex justify-center mb-4 text-salon-deep-pink">
           {icon}

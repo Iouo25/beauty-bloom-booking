@@ -14,7 +14,9 @@ const Services = () => {
         {/* Header */}
         <section className="py-20 bg-salon-pink">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Нашите Услуги</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+              Услуги в Isabella Beauty
+            </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Открийте пълната гама от професионални услуги, които предлагаме за вашата красота и комфорт
             </p>
@@ -27,8 +29,8 @@ const Services = () => {
             <div className="flex flex-col md:flex-row items-center">
               <div className="md:w-1/2 mb-10 md:mb-0 md:pr-10">
                 <div className="bg-salon-pink p-1 rounded-lg">
-                  <div className="bg-gray-200 h-96 rounded-lg flex items-center justify-center">
-                    <Calendar size={64} className="text-salon-deep-pink" />
+                  <div className="bg-gray-200 h-96 rounded-lg overflow-hidden">
+                    <img src="/laser-service.jpg" alt="Лазерна епилация" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </div>
@@ -55,6 +57,18 @@ const Services = () => {
                     <span>Трайни резултати след пълен курс процедури</span>
                   </li>
                 </ul>
+                <div className="mb-8 p-4 bg-salon-pink/20 rounded-lg">
+                  <h4 className="font-bold text-gray-800 mb-2">Специалист:</h4>
+                  <div className="flex items-center">
+                    <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
+                      <img src="/specialist-elena.jpg" alt="Елена Димитрова" className="w-full h-full object-cover" />
+                    </div>
+                    <div>
+                      <p className="font-semibold">Елена Димитрова</p>
+                      <p className="text-sm text-gray-600">Сертифициран специалист по лазерна епилация с 8 години опит</p>
+                    </div>
+                  </div>
+                </div>
                 <Button asChild className="bg-salon-deep-pink hover:bg-pink-500 text-white">
                   <Link to="/booking">Запази час сега</Link>
                 </Button>
@@ -69,8 +83,8 @@ const Services = () => {
             <div className="flex flex-col md:flex-row-reverse items-center">
               <div className="md:w-1/2 mb-10 md:mb-0 md:pl-10">
                 <div className="bg-salon-deep-pink p-1 rounded-lg">
-                  <div className="bg-gray-200 h-96 rounded-lg flex items-center justify-center">
-                    <User size={64} className="text-salon-deep-pink" />
+                  <div className="bg-gray-200 h-96 rounded-lg overflow-hidden">
+                    <img src="/manicure-service.jpg" alt="Маникюр" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </div>
@@ -97,6 +111,18 @@ const Services = () => {
                     <span>Спа маникюр с хидратиращи продукти</span>
                   </li>
                 </ul>
+                <div className="mb-8 p-4 bg-salon-pink/20 rounded-lg">
+                  <h4 className="font-bold text-gray-800 mb-2">Специалист:</h4>
+                  <div className="flex items-center">
+                    <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
+                      <img src="/specialist-maria.jpg" alt="Мария Петрова" className="w-full h-full object-cover" />
+                    </div>
+                    <div>
+                      <p className="font-semibold">Мария Петрова</p>
+                      <p className="text-sm text-gray-600">Нейл артист с над 10 години опит и множество награди за дизайн</p>
+                    </div>
+                  </div>
+                </div>
                 <Button asChild className="bg-salon-deep-pink hover:bg-pink-500 text-white">
                   <Link to="/booking">Запази час сега</Link>
                 </Button>
@@ -111,8 +137,8 @@ const Services = () => {
             <div className="flex flex-col md:flex-row items-center">
               <div className="md:w-1/2 mb-10 md:mb-0 md:pr-10">
                 <div className="bg-salon-gold p-1 rounded-lg">
-                  <div className="bg-gray-200 h-96 rounded-lg flex items-center justify-center">
-                    <Scissors size={64} className="text-salon-deep-pink" />
+                  <div className="bg-gray-200 h-96 rounded-lg overflow-hidden">
+                    <img src="/hair-service.jpg" alt="Фризьорски услуги" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </div>
@@ -143,6 +169,18 @@ const Services = () => {
                     <span>Прически за сватби и специални поводи</span>
                   </li>
                 </ul>
+                <div className="mb-8 p-4 bg-salon-pink/20 rounded-lg">
+                  <h4 className="font-bold text-gray-800 mb-2">Специалист:</h4>
+                  <div className="flex items-center">
+                    <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
+                      <img src="/specialist-ivan.jpg" alt="Иван Георгиев" className="w-full h-full object-cover" />
+                    </div>
+                    <div>
+                      <p className="font-semibold">Иван Георгиев</p>
+                      <p className="text-sm text-gray-600">Стилист с международен опит и специализация в колористика</p>
+                    </div>
+                  </div>
+                </div>
                 <Button asChild className="bg-salon-deep-pink hover:bg-pink-500 text-white">
                   <Link to="/booking">Запази час сега</Link>
                 </Button>
