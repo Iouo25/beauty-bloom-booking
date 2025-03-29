@@ -9,16 +9,16 @@ const Hero = () => {
       <div className="bg-salon-pink py-20 md:py-32 bg-cover bg-center" style={{ backgroundImage: 'url("/beauty-studio-bg.jpg")' }}>
         <div className="container mx-auto px-4 flex flex-col items-center text-center bg-white/60 py-12 rounded-lg backdrop-blur-sm">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
-            <span className="text-salon-deep-pink">Isabella Beauty</span>
+            <span className="text-salon-gold">Isabella Beauty</span>
           </h1>
           <p className="text-xl text-gray-700 max-w-2xl mb-10">
             Професионални услуги за лазерна епилация, маникюр и фризьорство в сърцето на София
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button asChild size="lg" className="bg-salon-deep-pink hover:bg-pink-500 text-white px-8">
+            <Button asChild size="lg" className="bg-salon-deep-pink hover:bg-gray-800 text-white px-8">
               <Link to="/booking">Запази час</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-salon-deep-pink text-salon-deep-pink hover:bg-salon-pink">
+            <Button asChild size="lg" variant="outline" className="border-salon-gold text-salon-gold hover:bg-salon-pink">
               <Link to="/services">Разгледай услугите</Link>
             </Button>
           </div>
@@ -31,7 +31,7 @@ const Hero = () => {
             <h2 className="text-2xl font-bold text-gray-800 mb-2">Резервирайте вашия час сега</h2>
             <p className="text-gray-600">Бързо и лесно онлайн резервиране</p>
           </div>
-          <Button asChild size="lg" className="bg-salon-deep-pink hover:bg-pink-500 text-white px-8">
+          <Button asChild size="lg" className="bg-salon-deep-pink hover:bg-gray-800 text-white px-8">
             <Link to="/booking">Запази час</Link>
           </Button>
         </div>

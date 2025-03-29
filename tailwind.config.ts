@@ -54,10 +54,10 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				salon: {
-					pink: "#F8BBD0",
-					"deep-pink": "#F06292",
-					gold: "#F9D6A5",
-					"deep-gold": "#E6BA7A",
+					pink: "#F4C2C2",
+					"deep-pink": "#000000",
+					gold: "#D4AF37",
+					"deep-gold": "#C19B2E",
 					cream: "#FFF9F0",
 				},
 				sidebar: {
