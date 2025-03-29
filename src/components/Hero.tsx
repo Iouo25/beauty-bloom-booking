@@ -1,12 +1,11 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-
 const Hero = () => {
-  return (
-    <div className="relative">
-      <div className="bg-salon-pink py-20 md:py-32 bg-cover bg-center" style={{ backgroundImage: 'url("/beauty-studio-bg.jpg")' }}>
+  return <div className="relative">
+      <div style={{
+      backgroundImage: 'url("/beauty-studio-bg.jpg")'
+    }} className="py-20 md:py-32 bg-cover bg-center bg-gray-950">
         <div className="container mx-auto px-4 flex flex-col items-center text-center bg-white/60 py-12 rounded-lg backdrop-blur-sm">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
             <span className="text-salon-gold">Isabella Beauty</span>
@@ -36,8 +35,6 @@ const Hero = () => {
           </Button>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Hero;
