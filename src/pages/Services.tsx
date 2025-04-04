@@ -17,9 +17,11 @@ const Services = () => {
   const [openNailOptions, setOpenNailOptions] = useState(false);
   const [openLaserOptions, setOpenLaserOptions] = useState(false);
   const [openNailDecorationOptions, setOpenNailDecorationOptions] = useState(false);
-  const [openClassicManicureOptions, setOpenClassicManicureOptions] = useState(false);
+  const [openBasicDecorOptions, setOpenBasicDecorOptions] = useState(false);
+  const [openNailPlasticOptions, setOpenNailPlasticOptions] = useState(false);
   const [openPedicureOptions, setOpenPedicureOptions] = useState(false);
   const [openBuildUpOptions, setOpenBuildUpOptions] = useState(false);
+  const [openBuildUpNailOptions, setOpenBuildUpNailOptions] = useState(false);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -233,70 +235,6 @@ const Services = () => {
               
               <div className="bg-white rounded-lg shadow-sm overflow-hidden">
                 <div className="divide-y divide-gray-100">
-                  {/* Classic Manicure Dropdown */}
-                  <Collapsible
-                    open={openClassicManicureOptions}
-                    onOpenChange={setOpenClassicManicureOptions}
-                    className="w-full"
-                  >
-                    <div className="hover:bg-gray-50">
-                      <CollapsibleTrigger className="flex justify-between items-center w-full p-4 text-left">
-                        <div className="flex items-center">
-                          <span className="text-gray-800 font-medium">Класически маникюр</span>
-                        </div>
-                        <div className="flex items-center">
-                          <span className="text-salon-gold mr-2">от 18 лв.</span>
-                          {openClassicManicureOptions ? <ChevronUp className="h-4 w-4 text-salon-gold" /> : <ChevronDown className="h-4 w-4 text-salon-gold" />}
-                        </div>
-                      </CollapsibleTrigger>
-                    </div>
-                    
-                    <CollapsibleContent>
-                      <div className="bg-gray-50 p-4">
-                        <div className="pl-4">
-                          <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                            <div>
-                              <div className="text-gray-800">Маникюр с лак</div>
-                              <div className="text-gray-500 text-sm">50 мин</div>
-                            </div>
-                            <div className="flex items-center">
-                              <span className="font-medium mr-4">18 лв.</span>
-                              <Button variant="outline" size="sm" className="bg-transparent border border-salon-gold text-salon-gold hover:bg-salon-gold hover:text-white">
-                                избери
-                              </Button>
-                            </div>
-                          </div>
-                          
-                          <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                            <div>
-                              <div className="text-gray-800">Изпиляване + лакиране</div>
-                              <div className="text-gray-500 text-sm">30 мин</div>
-                            </div>
-                            <div className="flex items-center">
-                              <span className="font-medium mr-4">14 лв.</span>
-                              <Button variant="outline" size="sm" className="bg-transparent border border-salon-gold text-salon-gold hover:bg-salon-gold hover:text-white">
-                                избери
-                              </Button>
-                            </div>
-                          </div>
-                          
-                          <div className="flex justify-between items-center py-3">
-                            <div>
-                              <div className="text-gray-800">Лакиране</div>
-                              <div className="text-gray-500 text-sm">20 мин</div>
-                            </div>
-                            <div className="flex items-center">
-                              <span className="font-medium mr-4">7 лв.</span>
-                              <Button variant="outline" size="sm" className="bg-transparent border border-salon-gold text-salon-gold hover:bg-salon-gold hover:text-white">
-                                избери
-                              </Button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </CollapsibleContent>
-                  </Collapsible>
-                  
                   {/* Gel Polish (Гел лак) Dropdown */}
                   <Collapsible
                     open={openNailOptions}
@@ -387,6 +325,57 @@ const Services = () => {
                     </CollapsibleContent>
                   </Collapsible>
                   
+                  {/* Nail Plastic (Ноктопластика) Dropdown */}
+                  <Collapsible
+                    open={openNailPlasticOptions}
+                    onOpenChange={setOpenNailPlasticOptions}
+                    className="w-full"
+                  >
+                    <div className="hover:bg-gray-50">
+                      <CollapsibleTrigger className="flex justify-between items-center w-full p-4 text-left">
+                        <div className="flex items-center">
+                          <span className="text-gray-800 font-medium">Ноктопластика (2)</span>
+                        </div>
+                        <div className="flex items-center">
+                          <span className="text-salon-gold mr-2">от 7 лв.</span>
+                          {openNailPlasticOptions ? <ChevronUp className="h-4 w-4 text-salon-gold" /> : <ChevronDown className="h-4 w-4 text-salon-gold" />}
+                        </div>
+                      </CollapsibleTrigger>
+                    </div>
+                    
+                    <CollapsibleContent>
+                      <div className="bg-gray-50 p-4">
+                        <div className="pl-4">
+                          <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                            <div>
+                              <div className="text-gray-800">1 брой</div>
+                              <div className="text-gray-500 text-sm">5 мин.</div>
+                            </div>
+                            <div className="flex items-center">
+                              <span className="font-medium mr-4">7 лв.</span>
+                              <Button variant="outline" size="sm" className="bg-transparent border border-salon-gold text-salon-gold hover:bg-salon-gold hover:text-white">
+                                избери
+                              </Button>
+                            </div>
+                          </div>
+                          
+                          <div className="flex justify-between items-center py-3">
+                            <div>
+                              <div className="text-gray-800">Сваляне на ноктопластика</div>
+                              <div className="text-gray-500 text-sm">15 мин.</div>
+                            </div>
+                            <div className="flex items-center">
+                              <span className="font-medium mr-4">10 лв.</span>
+                              <Button variant="outline" size="sm" className="bg-transparent border border-salon-gold text-salon-gold hover:bg-salon-gold hover:text-white">
+                                избери
+                              </Button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </CollapsibleContent>
+                  </Collapsible>
+                  
                   {/* Pedicure Dropdown */}
                   <Collapsible
                     open={openPedicureOptions}
@@ -438,7 +427,7 @@ const Services = () => {
                     </CollapsibleContent>
                   </Collapsible>
                   
-                  {/* Build Up (Изграждане) Dropdown */}
+                  {/* Build Up Gel (Изграждане с гел) Dropdown */}
                   <Collapsible
                     open={openBuildUpOptions}
                     onOpenChange={setOpenBuildUpOptions}
@@ -447,10 +436,10 @@ const Services = () => {
                     <div className="hover:bg-gray-50">
                       <CollapsibleTrigger className="flex justify-between items-center w-full p-4 text-left">
                         <div className="flex items-center">
-                          <span className="text-gray-800 font-medium">Изграждане</span>
+                          <span className="text-gray-800 font-medium">Изграждане с гел</span>
                         </div>
                         <div className="flex items-center">
-                          <span className="text-salon-gold mr-2">от 60 лв.</span>
+                          <span className="text-salon-gold mr-2">виж детайли</span>
                           {openBuildUpOptions ? <ChevronUp className="h-4 w-4 text-salon-gold" /> : <ChevronDown className="h-4 w-4 text-salon-gold" />}
                         </div>
                       </CollapsibleTrigger>
@@ -461,11 +450,11 @@ const Services = () => {
                         <div className="pl-4">
                           <div className="flex justify-between items-center py-3 border-b border-gray-100">
                             <div>
-                              <div className="text-gray-800">Изграждане с гел</div>
-                              <div className="text-gray-500 text-sm">2 ч</div>
+                              <div className="text-gray-800">Къси</div>
+                              <div className="text-gray-500 text-sm">2 ч.</div>
                             </div>
                             <div className="flex items-center">
-                              <span className="font-medium mr-4">60 лв.</span>
+                              <span className="font-medium mr-4">70 лв.</span>
                               <Button variant="outline" size="sm" className="bg-transparent border border-salon-gold text-salon-gold hover:bg-salon-gold hover:text-white">
                                 избери
                               </Button>
@@ -474,11 +463,24 @@ const Services = () => {
                           
                           <div className="flex justify-between items-center py-3 border-b border-gray-100">
                             <div>
-                              <div className="text-gray-800">Поддръжка с гел</div>
-                              <div className="text-gray-500 text-sm">1 ч 45 мин</div>
+                              <div className="text-gray-800">Средно дълги</div>
+                              <div className="text-gray-500 text-sm">2 ч 30 мин.</div>
                             </div>
                             <div className="flex items-center">
-                              <span className="font-medium mr-4">50 лв.</span>
+                              <span className="font-medium mr-4">80 лв.</span>
+                              <Button variant="outline" size="sm" className="bg-transparent border border-salon-gold text-salon-gold hover:bg-salon-gold hover:text-white">
+                                избери
+                              </Button>
+                            </div>
+                          </div>
+                          
+                          <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                            <div>
+                              <div className="text-gray-800">Дълги</div>
+                              <div className="text-gray-500 text-sm">3 ч.</div>
+                            </div>
+                            <div className="flex items-center">
+                              <span className="font-medium mr-4">90 лв.</span>
                               <Button variant="outline" size="sm" className="bg-transparent border border-salon-gold text-salon-gold hover:bg-salon-gold hover:text-white">
                                 избери
                               </Button>
@@ -487,11 +489,11 @@ const Services = () => {
                           
                           <div className="flex justify-between items-center py-3">
                             <div>
-                              <div className="text-gray-800">Сваляне на изграждане</div>
-                              <div className="text-gray-500 text-sm">45 мин</div>
+                              <div className="text-gray-800">Много дълги</div>
+                              <div className="text-gray-500 text-sm">3 ч 30 мин.</div>
                             </div>
                             <div className="flex items-center">
-                              <span className="font-medium mr-4">25 лв.</span>
+                              <span className="font-medium mr-4">100 лв.</span>
                               <Button variant="outline" size="sm" className="bg-transparent border border-salon-gold text-salon-gold hover:bg-salon-gold hover:text-white">
                                 избери
                               </Button>
@@ -502,20 +504,20 @@ const Services = () => {
                     </CollapsibleContent>
                   </Collapsible>
                   
-                  {/* Nail Decoration Dropdown */}
+                  {/* Nail Build Up (Изграждане на нокът) Dropdown */}
                   <Collapsible
-                    open={openNailDecorationOptions}
-                    onOpenChange={setOpenNailDecorationOptions}
+                    open={openBuildUpNailOptions}
+                    onOpenChange={setOpenBuildUpNailOptions}
                     className="w-full"
                   >
                     <div className="hover:bg-gray-50">
                       <CollapsibleTrigger className="flex justify-between items-center w-full p-4 text-left">
                         <div className="flex items-center">
-                          <span className="text-gray-800 font-medium">Лепене на нокът</span>
+                          <span className="text-gray-800 font-medium">Изграждане на нокът</span>
                         </div>
                         <div className="flex items-center">
-                          <span className="text-salon-gold mr-2">от 3 лв.</span>
-                          {openNailDecorationOptions ? <ChevronUp className="h-4 w-4 text-salon-gold" /> : <ChevronDown className="h-4 w-4 text-salon-gold" />}
+                          <span className="text-salon-gold mr-2">опции</span>
+                          {openBuildUpNailOptions ? <ChevronUp className="h-4 w-4 text-salon-gold" /> : <ChevronDown className="h-4 w-4 text-salon-gold" />}
                         </div>
                       </CollapsibleTrigger>
                     </div>
@@ -526,10 +528,10 @@ const Services = () => {
                           <div className="flex justify-between items-center py-3 border-b border-gray-100">
                             <div>
                               <div className="text-gray-800">1 брой</div>
-                              <div className="text-gray-500 text-sm">5 мин</div>
+                              <div className="text-gray-500 text-sm">5 мин.</div>
                             </div>
                             <div className="flex items-center">
-                              <span className="font-medium mr-4">3 лв.</span>
+                              <span className="font-medium mr-4">7 лв.</span>
                               <Button variant="outline" size="sm" className="bg-transparent border border-salon-gold text-salon-gold hover:bg-salon-gold hover:text-white">
                                 избери
                               </Button>
@@ -539,10 +541,10 @@ const Services = () => {
                           <div className="flex justify-between items-center py-3 border-b border-gray-100">
                             <div>
                               <div className="text-gray-800">2 броя</div>
-                              <div className="text-gray-500 text-sm">10 мин</div>
+                              <div className="text-gray-500 text-sm">10 мин.</div>
                             </div>
                             <div className="flex items-center">
-                              <span className="font-medium mr-4">6 лв.</span>
+                              <span className="font-medium mr-4">14 лв.</span>
                               <Button variant="outline" size="sm" className="bg-transparent border border-salon-gold text-salon-gold hover:bg-salon-gold hover:text-white">
                                 избери
                               </Button>
@@ -552,10 +554,100 @@ const Services = () => {
                           <div className="flex justify-between items-center py-3">
                             <div>
                               <div className="text-gray-800">3 броя</div>
-                              <div className="text-gray-500 text-sm">15 мин</div>
+                              <div className="text-gray-500 text-sm">15 мин.</div>
                             </div>
                             <div className="flex items-center">
-                              <span className="font-medium mr-4">9 лв.</span>
+                              <span className="font-medium mr-4">21 лв.</span>
+                              <Button variant="outline" size="sm" className="bg-transparent border border-salon-gold text-salon-gold hover:bg-salon-gold hover:text-white">
+                                избери
+                              </Button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </CollapsibleContent>
+                  </Collapsible>
+                  
+                  {/* Nail Decoration (Декорации на нокът) Dropdown */}
+                  <Collapsible
+                    open={openBasicDecorOptions}
+                    onOpenChange={setOpenBasicDecorOptions}
+                    className="w-full"
+                  >
+                    <div className="hover:bg-gray-50">
+                      <CollapsibleTrigger className="flex justify-between items-center w-full p-4 text-left">
+                        <div className="flex items-center">
+                          <span className="text-gray-800 font-medium">Декорации на нокът (печат, чертичка, камъче, фолио)</span>
+                        </div>
+                        <div className="flex items-center">
+                          <span className="text-salon-gold mr-2">опции</span>
+                          {openBasicDecorOptions ? <ChevronUp className="h-4 w-4 text-salon-gold" /> : <ChevronDown className="h-4 w-4 text-salon-gold" />}
+                        </div>
+                      </CollapsibleTrigger>
+                    </div>
+                    
+                    <CollapsibleContent>
+                      <div className="bg-gray-50 p-4">
+                        <div className="pl-4">
+                          <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                            <div>
+                              <div className="text-gray-800">на 2 нокътя</div>
+                              <div className="text-gray-500 text-sm">10 мин.</div>
+                            </div>
+                            <div className="flex items-center">
+                              <span className="font-medium mr-4">2 лв.</span>
+                              <Button variant="outline" size="sm" className="bg-transparent border border-salon-gold text-salon-gold hover:bg-salon-gold hover:text-white">
+                                избери
+                              </Button>
+                            </div>
+                          </div>
+                          
+                          <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                            <div>
+                              <div className="text-gray-800">на 4 нокътя</div>
+                              <div className="text-gray-500 text-sm">15 мин.</div>
+                            </div>
+                            <div className="flex items-center">
+                              <span className="font-medium mr-4">4 лв.</span>
+                              <Button variant="outline" size="sm" className="bg-transparent border border-salon-gold text-salon-gold hover:bg-salon-gold hover:text-white">
+                                избери
+                              </Button>
+                            </div>
+                          </div>
+                          
+                          <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                            <div>
+                              <div className="text-gray-800">на 6 нокътя</div>
+                              <div className="text-gray-500 text-sm">20 мин.</div>
+                            </div>
+                            <div className="flex items-center">
+                              <span className="font-medium mr-4">6 лв.</span>
+                              <Button variant="outline" size="sm" className="bg-transparent border border-salon-gold text-salon-gold hover:bg-salon-gold hover:text-white">
+                                избери
+                              </Button>
+                            </div>
+                          </div>
+                          
+                          <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                            <div>
+                              <div className="text-gray-800">на 8 нокътя</div>
+                              <div className="text-gray-500 text-sm">25 мин.</div>
+                            </div>
+                            <div className="flex items-center">
+                              <span className="font-medium mr-4">8 лв.</span>
+                              <Button variant="outline" size="sm" className="bg-transparent border border-salon-gold text-salon-gold hover:bg-salon-gold hover:text-white">
+                                избери
+                              </Button>
+                            </div>
+                          </div>
+                          
+                          <div className="flex justify-between items-center py-3">
+                            <div>
+                              <div className="text-gray-800">на 10 нокътя</div>
+                              <div className="text-gray-500 text-sm">30 мин.</div>
+                            </div>
+                            <div className="flex items-center">
+                              <span className="font-medium mr-4">10 лв.</span>
                               <Button variant="outline" size="sm" className="bg-transparent border border-salon-gold text-salon-gold hover:bg-salon-gold hover:text-white">
                                 избери
                               </Button>
@@ -704,3 +796,4 @@ const Services = () => {
 };
 
 export default Services;
+
