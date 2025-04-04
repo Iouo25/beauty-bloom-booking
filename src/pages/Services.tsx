@@ -12,12 +12,12 @@ const Services = () => {
       <NavBar />
       <main className="flex-grow">
         {/* Header */}
-        <section className="py-20 bg-salon-pink">
+        <section className="py-20 bg-salon-black text-white">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Услуги в Isabella Beauty
             </h1>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            <p className="text-xl max-w-3xl mx-auto">
               Открийте пълната гама от професионални услуги, които предлагаме за вашата красота и комфорт
             </p>
           </div>
@@ -304,13 +304,13 @@ const Services = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-salon-deep-pink text-white text-center">
+        <section className="py-16 bg-salon-black text-white text-center">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-4">Готови да се трансформирате?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Запазете вашия час сега и се доверете на нашите професионалисти
             </p>
-            <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-salon-deep-pink">
+            <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-salon-gold hover:text-salon-black">
               <Link to="/booking">Запази час</Link>
             </Button>
           </div>

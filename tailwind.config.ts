@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -59,6 +58,7 @@ export default {
 					gold: "#D4AF37",
 					"deep-gold": "#C19B2E",
 					cream: "#FFF9F0",
+					black: "#000000",
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
