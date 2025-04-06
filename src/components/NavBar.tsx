@@ -1,7 +1,9 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return <nav className="bg-white shadow-sm py-4 px-4 md:px-8">
@@ -33,7 +35,11 @@ const NavBar = () => {
           <Link to="/contact" className="text-gray-700 hover:text-salon-gold transition-colors">
             Контакти
           </Link>
-          <Button asChild variant="default" className="bg-salon-deep-pink hover:bg-gray-800 text-white">
+          <Button 
+            asChild 
+            variant="default" 
+            className="bg-[#D946EF] hover:bg-[#BA2FBF] text-white px-6 py-2 rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+          >
             <Link to="/booking">Запази час</Link>
           </Button>
         </div>
@@ -54,7 +60,12 @@ const NavBar = () => {
             <Link to="/contact" className="text-xl text-gray-800 hover:text-salon-gold" onClick={() => setIsMenuOpen(false)}>
               Контакти
             </Link>
-            <Button asChild variant="default" className="bg-salon-deep-pink hover:bg-gray-800 text-white w-full mt-4" onClick={() => setIsMenuOpen(false)}>
+            <Button 
+              asChild 
+              variant="default" 
+              className="bg-[#D946EF] hover:bg-[#BA2FBF] text-white w-full mt-4 rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+              onClick={() => setIsMenuOpen(false)}
+            >
               <Link to="/booking">Запази час</Link>
             </Button>
           </div>
@@ -62,3 +73,4 @@ const NavBar = () => {
     </nav>;
 };
 export default NavBar;
+
